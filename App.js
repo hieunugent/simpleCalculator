@@ -1,43 +1,44 @@
 
 import React from "react";
-import { Button, StyleSheet, Text, View, Alert } from "react-native";
+import { Button, StyleSheet, Text, View, Alert, SafeAreaView } from "react-native";
+import ButtonNumber from "./ButtonNumber";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello</Text>
-      <Button
-        title="click me"
-        onPress={() =>
-          Alert.alert(
-            "Alert Title",
-            "My Alert Msg",
-            [
-              {
-                text: "Ask me later",
-                onPress: () => console.log("Ask me later pressed"),
-              },
-              {
-                text: "Cancel",
-                onPress: () => console.log("Cancel Pressed"),
-                style: "cancel",
-              },
-              { text: "OK", onPress: () => console.log("OK Pressed") },
-            ],
-            { cancelable: false }
-          )
-        }
-      />
-  
-    </View>
+    <SafeAreaView style={styles.keypads}>
+      <View style={styles.keypad}>
+        <ButtonNumber title="1" />
+        <ButtonNumber title="2" />
+        <ButtonNumber title="3" />
+      </View>
+      <View style={styles.keypad}>
+        <ButtonNumber title="4" />
+        <ButtonNumber title="5" />
+        <ButtonNumber title="6" />
+      </View>
+      <View style={styles.keypad}>
+        <ButtonNumber title="7" />
+        <ButtonNumber title="8" />
+        <ButtonNumber title="9" />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  keypads:{
+    flex : 1,
+    backgroundColor:"steelblue",
+    
+
+  },
+
+  keypad: {
+
+    flexDirection:'row',
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
+    
   },
 });
