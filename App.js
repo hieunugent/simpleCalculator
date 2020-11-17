@@ -5,40 +5,34 @@ import ButtonNumber from "./ButtonNumber";
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.keypads}>
-      <View style={styles.keypad}>
-        <ButtonNumber title="1" />
-        <ButtonNumber title="2" />
-        <ButtonNumber title="3" />
+    <View>
+      <View style={styles.keypads}>
+        <ButtonNumber style={styles.keypad} title="1" />
+        <ButtonNumber style={styles.keypad} title="2" />
+        <ButtonNumber style={styles.keypad} title="3" />
       </View>
-      <View style={styles.keypad}>
-        <ButtonNumber title="4" />
-        <ButtonNumber title="5" />
-        <ButtonNumber title="6" />
+      <View style={styles.keypads}>
+        <ButtonNumber style={styles.keypad} title="4" />
+        <ButtonNumber style={styles.keypad} title="5" />
+        <ButtonNumber style={styles.keypad} title="6" />
       </View>
-      <View style={styles.keypad}>
-        <ButtonNumber title="7" />
-        <ButtonNumber title="8" />
-        <ButtonNumber title="9" />
+      <View style={styles.keypads}>
+        <ButtonNumber style={styles.keypad} title="7" />
+        <ButtonNumber style={styles.keypad} title="8" />
+        <ButtonNumber style={styles.keypad} title="9" />
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  keypads:{
-    flex : 1,
-    backgroundColor:"steelblue",
-    
-
+  keypads: {
+    height:'50%',
+    width:'90%'
   },
 
   keypad: {
-
-    flexDirection:'row',
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center",
-    
+    height:100,
+    width:100,
   },
 });
