@@ -5,7 +5,7 @@ import ButtonNumber from "./ButtonNumber";
 
 export default function App() {
   return (
-    <View>
+    <View style={styles.numberArea}>
       <View style={styles.keypads}>
         <ButtonNumber style={styles.keypad} title="1" />
         <ButtonNumber style={styles.keypad} title="2" />
@@ -27,12 +27,14 @@ export default function App() {
 
 const styles = StyleSheet.create({
   keypads: {
-    height:'50%',
-    width:'90%'
+    flexDirection:'row',
   },
 
   keypad: {
-    height:100,
-    width:100,
+  
   },
+  numberArea:{
+    width: '50%',
+
+  }
 });

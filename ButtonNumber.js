@@ -30,8 +30,6 @@ function ButtonNumber({title}) {
 }
 const styles = StyleSheet.create({
   container: {
-    height:'15%',
-    width: '15%',
     backgroundColor: "steelblue",
     color:"white"
 
